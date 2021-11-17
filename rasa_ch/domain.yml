@@ -9,6 +9,8 @@ intents:
   - mood_unhappy
   - bot_challenge
   - buy
+  - property
+  - contact
 
 responses:
   utter_greet:
@@ -40,8 +42,9 @@ responses:
     - text: "Select the type of property? "
       buttons:
         - title: " Unit "
-          payload: "/unit"
-        - title: " house "
+          payload: "unit"
+        - title: " House "
+          payload: "house"
 
 
 

@@ -99,3 +99,22 @@ nlu:
     - i want a property.
     - i want to invest
     -  i want to buy.
+
+- intent: property
+  examples: |
+    - unit
+    - units
+    - u
+    - uni
+    - house
+    - appartment
+
+- intent: contact
+  examples: |
+    - abc@gmail.com
+    - @
+    - .com
+    - abc@hotmail.com
+    - @yahoo.com
+    - gmail.com'
+    - mail

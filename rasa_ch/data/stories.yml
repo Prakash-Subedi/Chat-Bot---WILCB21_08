@@ -33,5 +33,9 @@ stories:
   steps:
     - intent: buy
     - action: utter_ask_type_of_property
+    - intent: property
+    - action: utter_ask_contact_detail
+    - intent: contact
+    - action: utter_submit
     - action: action_listen
 
