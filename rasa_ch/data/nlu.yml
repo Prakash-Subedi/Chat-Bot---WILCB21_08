@@ -90,3 +90,12 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: buy
+  examples: |
+    - i'd like to buy a house.
+    - i want a house.
+    - i want a unit
+    - i want a property.
+    - i want to invest
+    -  i want to buy.

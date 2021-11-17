@@ -28,3 +28,10 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: buy path 1
+  steps:
+    - intent: buy
+    - action: utter_ask_type_of_property
+    - action: action_listen
+

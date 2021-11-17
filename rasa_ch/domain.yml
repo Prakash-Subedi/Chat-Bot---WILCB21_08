@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - buy
 
 responses:
   utter_greet:
@@ -28,6 +29,25 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_ask_name:
+    - text: " Can you tell me your name, plaease? "
+
+  utter_ask_contact_detail:
+    - text: " Your Email? "
+
+  utter_ask_type_of_property:
+    - text: "Select the type of property? "
+      buttons:
+        - title: " Unit "
+          payload: "/unit"
+        - title: " house "
+
+
+
+  utter_submit:
+    - text: " We will contact you. "
+
 
 session_config:
   session_expiration_time: 60
