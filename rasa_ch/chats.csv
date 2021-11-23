@@ -1,0 +1,16 @@
+intent,user_input,entity_name,entity_value,action,bot_reply
+greet,Hi,,,utter_suggest_help, How can I help you today? Please select: 
+buy,buy,,,utter_ask_type_of_property,Select the type of property? 
+property,unit,,,utter_buy_loaction, Which location are searching the property? Please select
+location,Sydney,,,utter_ask_room_no,Select the number of room(s)? 
+room_no,Two rooms,,,utter_ask_name, Can you tell us your name, please? 
+name,Paarth,,,utter_ask_email, Your Email? 
+email,paarth9841@gmail.com,,,utter_ask_phone_no, What’s your best contact number? 
+phone_no,61420337173,,,greet,hi,,,utter_suggest_help, How can I help you today? Please select: 
+sell,sell,,,utter_ask_type_of_property,Select the type of property? 
+property,house,,,utter_sell_loaction, Location of your property? Please select 
+location,CentralCoast,,,utter_ask_room_no,Select the number of room(s)? 
+room_no,Two rooms,,,utter_ask_name, Can you tell us your name, please? 
+name,prakash subedi,,,utter_ask_email, Your Email? 
+email,fjdklvgnak@gmail.com,,,utter_ask_phone_no, What’s your best contact number? 
+phone_no,04524432785,,,

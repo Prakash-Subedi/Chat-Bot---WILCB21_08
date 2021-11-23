@@ -91,14 +91,28 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: name
+  examples: |
+    - i'm prakash
+    - i am prakash
+    - My name is xyz abc
+    - i am prakash subedi
+    - Paarth Khanal
+
 - intent: buy
   examples: |
-    - i'd like to buy a house.
-    - i want a house.
-    - i want a unit
-    - i want a property.
-    - i want to invest
-    -  i want to buy.
+    - buy
+    - buy house
+    - buy unit
+    - buy land
+
+- intent: sell
+  examples: |
+    - sell
+    - sell my house
+    - sell unit
+    - sell land
+
 
 - intent: property
   examples: |
@@ -108,8 +122,11 @@ nlu:
     - uni
     - house
     - appartment
+    - land
+    - townhouse
+    - town house
 
-- intent: contact
+- intent: email
   examples: |
     - abc@gmail.com
     - @
@@ -118,3 +135,62 @@ nlu:
     - @yahoo.com
     - gmail.com'
     - mail
+
+- intent: phone_no
+  examples: |
+    - 0452442318
+    - +61452678439
+    - 0212344321
+    - +61000000000
+    - 0400000000
+    - my phone number is 0452764523
+    - phone no. 0476567290
+
+- regex: phone_no
+  examples: |
+    - \d{10,12}
+
+
+- intent: rent
+  examples: |
+    - rent a property
+    - rental property
+    - rent a unit
+    - rent
+    - rent house
+
+- intent: location
+  examples: |
+    - Sydney
+    - CentralCoast
+    - Wollongong
+    - Newcastle
+
+- intent: room_no
+  examples: |
+    - One room
+    - Two rooms
+    - Three rooms
+    - Four +
+
+- intent: enquiry
+  examples: |
+    - i need a help.
+    - general enquiry
+    - i am here for enquiry.
+    - can you tell me something.
+    - can you help?
+    - can i talk to the agent?
+    - How Can I Get My Original Mortgage Agreement?
+    - can you send me agreement paper?
+    - How to Find How Long a House Has Been on the Market?
+    - How to Find Out If a House Is Rented or Owned?
+    - average property price?
+    - is this the time to invest in real estate ?
+    - inquiry
+    - i want to rent a house.
+    - i'd like a unit on rent
+
+
+
+

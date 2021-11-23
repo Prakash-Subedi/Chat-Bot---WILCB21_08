@@ -2,40 +2,95 @@ version: "2.0"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
 
 - story: buy path 1
   steps:
     - intent: buy
     - action: utter_ask_type_of_property
     - intent: property
-    - action: utter_ask_contact_detail
-    - intent: contact
-    - action: utter_submit
+    - action: utter_buy_loaction
+    - intent: location
+    - action: utter_ask_room_no
+    - intent: room_no
+    - action: utter_ask_name
+    - intent: name
+    - action: utter_ask_email
+    - intent: email
+    - action: utter_ask_phone_no
+    - intent: phone_no
+    - action: action_save_conversation
     - action: action_listen
 
+- story: sell path 1
+  steps:
+    - intent: sell
+    - action: utter_ask_type_of_property
+    - intent: property
+    - action: utter_sell_loaction
+    - intent: location
+    - action: utter_ask_room_no
+    - intent: room_no
+    - action: utter_ask_name
+    - intent: name
+    - action: utter_ask_email
+    - intent: email
+    - action: utter_ask_phone_no
+    - intent: phone_no
+    - action: action_save_conversation
+    - action: action_listen
+
+- story: rent path 1
+  steps:
+    - intent: rent
+    - action: utter_ask_type_of_property
+    - intent: property
+    - action: utter_buy_loaction
+    - intent: location
+    - action: utter_ask_room_no
+    - intent: room_no
+    - action: utter_ask_name
+    - intent: name
+    - action: utter_ask_email
+    - intent: email
+    - action: utter_ask_phone_no
+    - intent: phone_no
+    - action: action_save_conversation
+    - action: action_listen
+
+- story: general enquiry
+  steps:
+    - intent: enquiry
+    - action: utter_ask_name
+    - intent: name
+    - action: utter_ask_email
+    - intent: email
+    - action: utter_ask_phone_no
+    - intent: phone_no
+    - action: action_save_conversation
+    - action: action_listen

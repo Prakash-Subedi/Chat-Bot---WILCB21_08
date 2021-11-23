@@ -12,3 +12,12 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: Start of conversation
+  steps:
+    - intent: greet
+    - action: utter_suggest_help
+
+- rule: Help on inquiry
+  steps:
+    - intent: inquiry
+    - action: utter_suggest_help

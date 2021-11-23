@@ -10,7 +10,14 @@ intents:
   - bot_challenge
   - buy
   - property
-  - contact
+  - sell
+  - location
+  - name
+  - email
+  - phone_no
+  - rent
+  - room_no
+  - enquiry
 
 responses:
   utter_greet:
@@ -18,7 +25,7 @@ responses:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -32,10 +39,22 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_ask_name:
-    - text: " Can you tell me your name, plaease? "
+  utter_suggest_help:
+    - text: " How can I help you today? Please select: "
+      buttons:
+        - title: " Buy "
+          payload: "buy"
+        - title: " Sell "
+          payload: "sell"
+        - title: " Rent "
+          payload: "rent"
+        - title: " General enquiry "
+          payload: "enquiry"
 
-  utter_ask_contact_detail:
+  utter_ask_name:
+    - text: " Can you tell us your name, please? "
+
+  utter_ask_email:
     - text: " Your Email? "
 
   utter_ask_type_of_property:
@@ -45,12 +64,67 @@ responses:
           payload: "unit"
         - title: " House "
           payload: "house"
+        - title: " Townhouse "
+          payload: "townhouse"
+        - title: " Land "
+          payload: "land"
 
+  utter_ask_room_no:
+    - text: "Select the number of room(s)? "
+      buttons:
+        - title: " One room "
+          payload: "One room"
+        - title: " Two rooms "
+          payload: "Two rooms"
+        - title: " Three rooms "
+          payload: " Three rooms "
+        - title: " Four + "
+          payload: "Four + "
 
+#  utter_ask_locaton_option:
+#    - text: " Please select: "
+#      buttons:
+#      - title: " Sydney "
+#        payload: "Sydney"
+#      - title: " Central Coast "
+#        payload: "CentralCoast"
+#      - title: "  Wollongong "
+#        payload: " Wollongong"
+#      - title: " Newcastle "
+#        payload: "Newcastle "
+
+  utter_buy_loaction:
+    - text: " Which location are searching the property? Please select"
+      buttons:
+        - title: " Sydney "
+          payload: "Sydney"
+        - title: " Central Coast "
+          payload: "CentralCoast"
+        - title: "  Wollongong "
+          payload: " Wollongong"
+        - title: " Newcastle "
+          payload: "Newcastle "
+
+  utter_sell_loaction:
+    - text: " Location of your property? Please select "
+      buttons:
+        - title: " Sydney "
+          payload: "Sydney"
+        - title: " Central Coast "
+          payload: "CentralCoast"
+        - title: "  Wollongong "
+          payload: " Wollongong"
+        - title: " Newcastle "
+          payload: "Newcastle "
+
+  utter_ask_phone_no:
+    - text: " What’s your best contact number? "
 
   utter_submit:
-    - text: " We will contact you. "
+    - text: "Thank you for your details. We will contact you. "
 
+actions:
+  - action_save_conversation
 
 session_config:
   session_expiration_time: 60
